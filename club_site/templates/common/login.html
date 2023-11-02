@@ -15,15 +15,11 @@
       {% csrf_token %}
       {% include "form_errors.html" %}
       <h1>로그인</h1>
-      <div class="social-container">
-        <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
-        <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
-        <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
-      </div>
-      <span>안내한 인증코드로 로그인 해 주세요.</span>
+      <br><br>
+      <span>최초 로그인시 안내한 인증코드로 로그인 해 주세요.</span>
       <input type="text" name="username" id="username" placeholder="학번" value="{{ form.username.value|default_if_none:'' }}"/>
       <input type="password"name="password" id="password" placeholder="인증코드" value="{{ form.password.value|default_if_none:'' }}"/>
-      <a href="#">인증코드를 잃어버리셨나요?</a>
+      <a href="#">비밀번호를 잃어버리셨나요?</a>
       <button>로그인</button>
     </form>
   </div>
